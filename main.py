@@ -121,7 +121,7 @@ for steps in range(step_start,N_STEPS):
         myagent.update_strategy(batch)
 
     if (steps+1) % int(N_STEPS/1000) == 0:
-        print(f"Step {steps+1} | Time taken: {sc.show_time_taken()} | "+sc.show_best_episode())
+        print(f"Step {steps+1} | Episode {sc.eps_counter} | Time taken: {sc.show_time_taken()} | "+sc.show_best_episode())
 
     if (steps+1) % SAVE_INTERVAL == 0:
         sc.save_model(myagent,steps)
